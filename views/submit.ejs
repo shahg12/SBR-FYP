@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>submit idea</title>
+    <link rel="stylesheet" href="submit.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> SBR. </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="nav-bar">home</a>
+        <a href="startup">Startup Ideas</a>
+        <a href="submit">Submit Idea</a>
+        <a href="blogservices">Blog Services</a>
+        <a href="consultant">Consultant</a>
+        <a href="#foot">About Us</a>
+        <a href="login.ejs" class="btns">Sign Up</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <!---- <div id="search-btn" class="fas fa-search"></div>----->
+      </div>
+    </header>
+
+    <form class="box" action="/submit" method="post">
+      <h1>Submit your idea</h1>
+      <p>let your bright idea.</p>
+
+      <h2>
+        Enter Title<input
+          type="text"
+          name="title"
+          placeholder="Enter Title"
+          style="color: black"
+        />
+      </h2>
+
+      <h2>
+        Enter Description<textarea
+          name="description"
+          type="text"
+          cols="50"
+          rows="20"
+          style="color: black"
+        ></textarea>
+      </h2>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script src="js/script.js"></script>
+  </body>
+</html>

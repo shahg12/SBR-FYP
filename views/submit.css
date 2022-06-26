@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {background:#f2f2f2; margin: 0px; padding: 0px; font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";}
+
+/*menu */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: #10221b;
+  }
+  
+  section {
+    padding: 5rem 9%;
+  }
+  
+  .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 0.2rem solid #10221b;
+    color: #10221b;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+  }
+  
+  .btn:hover {
+    background: #10221b;
+    color: #fff;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    color: #10221b;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .header.active {
+    background: #fff;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  .header .logo {
+    margin-right: auto;
+    font-size: 2.5rem;
+    color: #10221b;
+    font-weight: bolder;
+  }
+  
+  .header .logo i {
+    color: #219150;
+  }
+  .header .navbar li {display: inline; width: 120px;}
+  .header .navbar  a {
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    color:black;
+    font-weight: bolder;
+    
+  }
+  
+  .header .navbar a:hover {
+    color: #219150;
+  }
+  
+  
+  .header .navbar a.btns { display: inline-block;
+    padding:10px 30px;
+    border:1px solid #334;
+    color:#334;
+    font-size: 16px;
+  margin-left: 20px;}
+  
+  .header .navbar a.btns:hover {background: #219150;}
+  
+  .header .navbar #nav-close {
+    font-size: 5rem;
+    cursor: pointer;
+    color: #10221b;
+    display: none;
+  }
+  
+  .header .icons a,
+  .header .icons div {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: #10221b;
+  }
+  
+  .header .icons a:hover,
+  .header .icons div:hover {
+    color: #219150;
+  }
+  
+  .header #menu-btn {
+    display: none;
+  }
+  
+  /*menu end*/
+
+
+.box {width: 700px; padding: 40px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; background:#fff; margin-top: 100px; }
+
+.box h1 {color: black; text-transform: uppercase; font-weight: bold; font-size: 20px;  }
+
+.box p {color: black; font-size: 10px; }
+
+.box h2 {font-family: sans-serif; font-size: 14px; color: black; font-weight: bold; margin-top: 5px; }
+
+.box input[type="text"],.box input[type="password"]{border: 0px; background: none; display: block; margin: 20px auto; text-align: center; border: 2px solid black; padding: 14px 10px; width: 200px; outline: none; color: white; border-radius: 24px; transition: 0.25s;}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus {width: 280px; border-color: #2ecc71;}
+
+.box input[type="submit"] {border: 0px; background: none; display: block; margin: 20px auto; text-align: center; border: 2px solid #2ecc71; padding: 14px 40px;  outline: none; color: black; border-radius: 24px; transition: 0.25s;}
+
+.box input[type="submit"]:hover {background: #2ecc71;}
+
+
+.box textarea[type="text"],.box input[type="password"]{border: 0px; background: none; display: block; margin: 20px auto; text-align: center; border: 2px solid black; padding: 14px 10px; width: 200px; outline: none; color: white; border-radius: 24px; transition: 0.25s;}
+
+.box textarea[type="text"]:focus,.box input[type="password"]:focus {width: 280px; border-color: #2ecc71;}
+
+.box textarea[type="submit"] {border: 0px; background: none; display: block; margin: 20px auto; text-align: center; border: 2px solid #2ecc71; padding: 14px 40px;  outline: none; color: white; border-radius: 24px; transition: 0.25s;}
+
+.box textarea[type="submit"]:hover {background: #2ecc71;}

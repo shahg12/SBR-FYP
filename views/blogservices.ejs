@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog services</title>
+    <link rel="stylesheet" href="blog services.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> SBR. </a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="nav-bar">home</a>
+        <a href="startup">Startup Ideas</a>
+        <a href="submit">Submit Idea</a>
+        <a href="blogservices">Blog Services</a>
+        <a href="consultant">Consultant</a>
+        <a href="#foot">About Us</a>
+        <a href="register.html" class="btns">Sign Up</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <!---- <div id="search-btn" class="fas fa-search"></div>----->
+      </div>
+    </header>
+    <section class="category">
+      <h1 class="heading">Blogs!</h1>
+
+      <div class="box-container">
+        <!-- <div class="box">
+                <img src="images/ss1.jpg" alt="">
+                <h3>dairy farm</h3>
+                <p>The dairy farming business can be highly profitable if the costs are managed effectively.</p>
+                <a href="dairy" class="btn">read more</a>
+            </div> -->
+
+        <% blogs.forEach((row,index)=> {%>
+
+        <div class="box">
+          <img src="<%= row.image %>" alt="" />
+          <h3><%=row.title%></h3>
+          <p><%=row.description.slice(0,80)%></p>
+            <a href='/blogservices/desc/<%= row._id %>' class="btn">read more</a>
+        </div>
+
+        <% }) %>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>

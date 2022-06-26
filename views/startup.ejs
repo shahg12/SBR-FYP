@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/startup.css" />
+	</head>
+	<body>
+		<header class="header">
+			<a href="#" class="logo"> SBR. </a>
+
+			<nav class="navbar">
+				<div id="nav-close" class="fas fa-times"></div>
+				<a href="nav-bar">home</a>
+				<a href="startup">Startup Ideas</a>
+				<a href="submit">Submit Idea</a>
+				<a href="blogservices">Blog Services</a>
+				<a href="consultant">Consultant</a>
+				<a href="#blogs">About Us</a>
+				<a href="login.ejs" class="btns">Sign Up</a>
+			</nav>
+
+			<div class="icons">
+				<div id="menu-btn" class="fas fa-bars"></div>
+				<!---- <div id="search-btn" class="fas fa-search"></div>----->
+			</div>
+		</header>
+		<!-- startup ideas section starts  -->
+		<section class="startup">
+			<div class="container">
+				<h1 class="heading">Startup ideas</h1>
+
+				<div class="box-container">
+					<!-- <%  startupIdea.forEach((row,index)=> {%>
+
+         <div class="box">
+               <h3><%=row.title%></h3>
+             <p><%=row.description?.slice(1,400)%> </p>
+           
+             <a href='/startup/blog/<%= row._id %>' class="btn">read more</a>
+         </div>
+
+     <% }) %> -->
+
+					<div class="box">
+						<div class="image">
+							<img src="images/f1.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>Fish Farming</h3>
+							<p>
+								Fish farming is very profitable. Fish farming is a good
+								retirement activity.
+							</p>
+							<a href="blogservices" class="btn">read blog</a>
+							<!-- <div class="icons">
+    <span> <i class="fas fa-calendar"></i> 27st jan, 2022 </span>
+    <span> <i class="fas fa-user"></i> by admin </span>
+ </div> -->
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="image">
+							<img src="images/ss1.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>Dairy Farming</h3>
+							<p>
+								Dairy farming, anything from milk, yogurt, butter etc, minimal
+								waste with multiple by-products.
+							</p>
+							<a href="#" class="btn">Read Blog</a>
+							<!-- <div class="icons">
+                <span> <i class="fas fa-calendar"></i> 27st jan, 2022 </span>
+                <span> <i class="fas fa-user"></i> by admin </span>
+             </div> -->
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="image">
+							<img src="images/img-2.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>Poultry Farming</h3>
+							<p>
+								Poultry farming, raising of birds domestically or commercially,
+								primarily for meat and eggs.
+							</p>
+							<a href="blogservices" class="btn">read blog</a>
+							<!-- <div class="icons">
+                <span> <i class="fas fa-calendar"></i> 27st jan, 2022 </span>
+                <span> <i class="fas fa-user"></i> by admin </span>
+             </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

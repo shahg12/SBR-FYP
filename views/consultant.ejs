@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="css/constyle.css" />
+	</head>
+	<body>
+		<header class="header">
+			<a href="#" class="logo"> SBR. </a>
+
+			<nav class="navbar">
+				<div id="nav-close" class="fas fa-times"></div>
+				<a href="nav-bar">home</a>
+				<a href="startup">Startup Ideas</a>
+				<a href="submit">Submit Idea</a>
+				<a href="blogservices">Blog Services</a>
+				<a href="consultant">Consultant</a>
+				<a href="#blogs">About Us</a>
+				<a href="login.html" class="btns">Sign Up</a>
+			</nav>
+
+			<div class="icons">
+				<div id="menu-btn" class="fas fa-bars"></div>
+				<!---- <div id="search-btn" class="fas fa-search"></div>----->
+			</div>
+		</header>
+		<section class="cons">
+			<div class="container">
+				<h1 class="heading">Our Consultant</h1>
+				<input type="radio" name="dot" id="one" />
+				<input type="radio" name="dot" id="two" />
+				<div class="main-card">
+					<% profile.forEach((row,index)=> {%>
+					<div class="cards">
+						<div class="card">
+							<div class="content">
+								<div class="img">
+									<img src="<%= row.image %>" alt="" />
+								</div>
+								<div class="details">
+									<div class="name"><%=row.name%></div>
+									<div class="job"><%=row.designation%></div>
+								</div>
+								<!-- <div class="media-icons">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div> -->
+							</div>
+						</div>
+					</div>
+
+					<% }) %>
+				</div>
+				<!-- <div class="card">
+               <div class="content">
+                 <div class="img">
+                   <img src="images/co3.jpg" alt="">
+                 </div>
+                 <div class="details">
+                   <div class="name">nazak alak</div>
+                   <div class="job">fish farming</div>
+                 </div>
+                 <div class="media-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   <a href="#"><i class="fab fa-youtube"></i></a>
+                 </div>
+               </div>
+              </div>
+
+
+
+
+              <div class="card">
+               <div class="content">
+                 <div class="img">
+                   <img src="images/co2.jpg" alt="">
+                 </div>
+                 <div class="details">
+                   <div class="name">ubaid</div>
+                   <div class="job">Dairy farm</div>
+                 </div>
+                 <div class="media-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   <a href="#"><i class="fab fa-youtube"></i></a>
+                 </div>
+               </div>
+              </div>
+              <div class="card">
+               <div class="content">
+                 <div class="img">
+                   <img src="images/co1.jpg" alt="">
+                 </div>
+                 <div class="details">
+                   <div class="name">shah abdeen</div>
+                   <div class="job">Poultry farm</div>
+                 </div>
+                 <div class="media-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   <a href="#"><i class="fab fa-youtube"></i></a>
+                 </div>
+               </div>
+              </div>
+            </div>
+            <div class="cards">
+              <div class="card">
+               <div class="content">
+                 <div class="img">
+                   <img src="images/c1.jpg" alt="">
+                 </div>
+                 <div class="details">
+                   <div class="name">nazak alak</div>
+                   <div class="job">Web Designer</div>
+                 </div>
+                 <div class="media-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   <a href="#"><i class="fab fa-youtube"></i></a>
+                 </div>
+               </div>
+              </div>
+              <div class="card">
+               <div class="content">
+                 <div class="img">
+                   <img src="images/c2.jpg" alt="">
+                 </div>
+                 <div class="details">
+                   <div class="name">ubaid</div>
+                   <div class="job">UI Designer</div>
+                 </div>
+                 <div class="media-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   <a href="#"><i class="fab fa-youtube"></i></a>
+                 </div>
+               </div>
+              </div>
+              <div class="card">
+               <div class="content">
+                 <div class="img">
+                   <img src="images/c3.jpg" alt="">
+                 </div>
+                 <div class="details">
+                   <div class="name">shah</div>
+                   <div class="job">Web Devloper</div>
+                 </div>
+                 <div class="media-icons">
+                   <a href="#"><i class="fab fa-facebook-f"></i></a>
+                   <a href="#"><i class="fab fa-twitter"></i></a>
+                   <a href="#"><i class="fab fa-instagram"></i></a>
+                   <a href="#"><i class="fab fa-youtube"></i></a>
+                 </div>
+               </div>
+              </div>
+            </div> -->
+
+				<div class="button">
+					<label for="one" class="one active"></label>
+					<label for="two" class="two"></label>
+				</div>
+			</div>
+		</section>
+		<script src="js/script.js"></script>
+	</body>
+</html>
