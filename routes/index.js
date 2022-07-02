@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var User = require("../models/user");
 var BlogModel = require("../models/blog");
+var AppointmentModel = require("../models/appointment");
 var IdeaModel = require("../models/idea");
 var StartupIdeaModel = require("../models/startupidea");
 
@@ -189,7 +190,31 @@ router.post("/addBlog", upload, function (req, res, next) {
       res.redirect("/blogservices");
     }
   });
+});
 
+  router.post("/addAppointment", function (req, res, next) {
+    console.log(req.body);
+    var appointmentData = req.body;
+  
+    console.log("df", appointmentData);
+  
+    var appointment = new AppointmentModel({
+      title: appointmentData.title,
+      description: appointmentData.description,
+      payment: appointmentData.payment,
+      reason:appointmentData.reason
+    });
+  
+    console.log(appointment, "df");
+  
+    appointment.save(function (err, appointment) {
+      if (err) console.log(err);
+      else {
+        console.log("Success", appointment);
+        res.redirect("/consultantProfile");
+      }
+    });
+  
   // if (blog) {
   //  return  res.redirect("/blogservices.ejs");
 
@@ -200,6 +225,12 @@ router.post("/addBlog", upload, function (req, res, next) {
 
 router.get("/registerConsultant", function (req, res, next) {
   return res.render("registerConsultant.ejs");
+});
+router.get("/bookAppointment", function (req, res, next) {
+  return res.render("bookAppointment.ejs");
+});
+router.get("/consultantProfile", function (req, res, next) {
+  return res.render("consultantProfile.ejs");
 });
 
 router.get("/add-project-idea", function (req, res, next) {

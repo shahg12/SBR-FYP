@@ -22,6 +22,7 @@
 				<a href="submit">Submit Idea</a>
 				<a href="blogservices">Blog Services</a>
 				<a href="consultant">Consultant</a>
+        <a href="registerConsultant">Register Consultant</a>
 				<a href="#blogs">About Us</a>
 				<a href="login.html" class="btns">Sign Up</a>
 			</nav>
@@ -38,6 +39,7 @@
 				<input type="radio" name="dot" id="two" />
 				<div class="main-card">
 					<% profile.forEach((row,index)=> {%>
+            <a href='/consultantProfile' >
 					<div class="cards">
 						<div class="card">
 							<div class="content">
@@ -57,7 +59,7 @@
 							</div>
 						</div>
 					</div>
-
+</a>
 					<% }) %>
 				</div>
 				<!-- <div class="card">
