@@ -58,77 +58,49 @@
         </div>
     </header>
     <section class="category">
-        <h1 class="heading">Book Appointment!</h1>
+        <h1 class="heading">Comment!</h1>
 
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
           <form
-             action="/addAppointment"
+             action="/addComment"
             method="post"
           >
             <div class="mb-3">
-              <label for="exampleInputName" class="form-label">Card Number</label>
+              <label for="exampleInputName" class="form-label">Comment</label>
               <input
                 type="text"
-                name="cardNumber"
+                name="message"
                 class="form-control"
                 id="cardNumber"
                 aria-describedby="emailHelp"
+                multirow={true}
               />
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
-                >Name on Card</label
-              >
+                >Rating
+              
               <input
                 type="text"
-                name="cardHolder"
+                name="rating"
                 class="form-control"
                 id="cardHolder"
                 aria-describedby="emailHelp"
               />
             </div>
 
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >Expiration (MM/YY)</label
-                >
-                <input
-                  type="date"
-                  name="expireDate"
-                  class="form-control"
-                  id="expireDate"
-                  aria-describedby="emailHelp"
-                />
-              </div>
+          
   
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"
-                  >CVV</label
-                >
-                <input
-                  type="text"
-                  name="cvv"
-                  class="form-control"
-                  id="cvv"
-                  aria-describedby="emailHelp"
-                />
-              </div>
+            
   
-            <input type="submit" class="btn btn-primary" value="Pay Now"></input>
+            <input type="submit" class="btn btn-primary" value="Send Comment"></input>
           </form>
         </div>
       </div>
     </div>
     </section>
-<script>
-  function onSubmit(event){
-    event.preventDefault()
-    const card=document.getElementById("cardNumber").value
 
-console.log(card)
-  }
-</script>
   </body>
 </html>
