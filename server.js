@@ -7,7 +7,7 @@ var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 var session = require('express-session')
 var MongoStore = require('connect-mongo')(session)
-
+const stripe = require('stripe')
 var dbConnect = require('./docs/config/db')
 
 dbConnect()
@@ -44,6 +44,21 @@ app.get('/video', (req, res) => {
 })
 app.get('/video/:room', (req, res) => {
   res.render('room', { roomId: req.params.room })
+})
+app.post('/charge', (req, res) => {
+  try {
+      stripe.customers.create({
+          name: req.body.name,
+          email: req.body.email,
+          source: req.body.stripeToken
+      }).then(customer => stripe.charges.create({
+          amount: req.body.amount * 100,
+          currency: 'usd',
+          customer: customer.id,
+          description: 'Thank you for your generous donation.'
+      })).then(() => res.render('complete.html'))
+          .catch(err => console.log(err))
+  } catch (err) { res.send(err) }
 })
 
 io.on('connection', socket => {
